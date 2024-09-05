@@ -4,9 +4,16 @@
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
- //YOUR COPIED FIREBASE PART SHOULD BE HERE
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
- };
+      apiKey: "AIzaSyBT5KG1fE9xP2iX0MqR5T-8F6Xwbrpl_yo",
+      authDomain: "login-page-477d9.firebaseapp.com",
+      projectId: "login-page-477d9",
+      storageBucket: "login-page-477d9.appspot.com",
+      messagingSenderId: "992274864924",
+      appId: "1:992274864924:web:cc1f5e61dd2e0b3cc9b8d9",
+      measurementId: "G-KXBNSZGDL5"
+    };
+  
+
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
@@ -77,7 +84,7 @@
     })
     .catch((error)=>{
         const errorCode=error.code;
-        if(errorCode==='auth/invalid-credential'){
+        if(errorCode==='auth/wrong-password'){
             showMessage('Incorrect Email or Password', 'signInMessage');
         }
         else{
